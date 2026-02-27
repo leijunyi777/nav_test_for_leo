@@ -15,7 +15,9 @@ def generate_launch_description():
     rviz_config_file = os.path.join(pkg_share, 'rviz', 'default.rviz')
     nav2_real_params_file = os.path.join(pkg_share, 'config', 'nav2_real_params.yaml')
 
-    rplidar_launch_path = '/home/student40/Robotic_systems_design/nav2/src/rplidar_ros/launch/rplidar_a2m12_launch.py'
+    #rplidar_launch_path = '/home/student40/Robotic_systems_design/nav2/src/rplidar_ros/launch/rplidar_a2m12_launch.py'
+    rplidar_dir = get_package_share_directory('rplidar_ros')
+    rplidar_launch_path = os.path.join(rplidar_dir, 'launch', 'rplidar_a2m12_launch.py')
     
     # 1. Joy Node (读取手柄硬件)
     joy_node = Node(
@@ -57,7 +59,8 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(rplidar_launch_path),
         launch_arguments={
             'serial_port': '/dev/ttyUSB0',  # 确保端口正确
-            'frame_id': 'laser'             # 确保 frame_id 匹配 TF
+            'frame_id': 'laser',
+            'range_min': '0.4'             # 确保 frame_id 匹配 TF
         }.items()
     )
     # 4. 发布 TF (base_link -> laser)
