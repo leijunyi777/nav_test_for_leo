@@ -108,8 +108,8 @@ local_costmap:
           
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 15.0   # 官方衰减系数
-        inflation_radius: 0.10     # 安全膨胀半径
+        cost_scaling_factor: 2.0   # 官方衰减系数
+        inflation_radius: 0.05     # 安全膨胀半径
 
 global_costmap:
   global_costmap:
@@ -144,8 +144,8 @@ global_costmap:
           
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 15.0
-        inflation_radius: 0.30
+        cost_scaling_factor: 2.0
+        inflation_radius: 0.05
 
 # ================= AEB 碰撞监视器 =================
 collision_monitor:
