@@ -7,14 +7,14 @@ bt_navigator:
   ros__parameters:
     use_sim_time: False
     global_frame: map
-    robot_base_frame: base_link
+    robot_base_frame: base_footprint
     odom_topic: /odom
     default_bt_xml_filename: "navigate_to_pose_w_replanning_and_recovery.xml"
 
 controller_server:
   ros__parameters:
     use_sim_time: False
-    controller_frequency: 20.0
+    controller_frequency: 10.0
     progress_checker_plugin: "progress_checker"
     goal_checker_plugins: ["general_goal_checker"]
     controller_plugins: ["FollowPath"]
@@ -42,7 +42,7 @@ controller_server:
       transform_tolerance: 0.5
       
       # 核心：允许原地转弯对准
-      use_rotate_to_heading: true
+      use_rotate_to_heading: false
       rotate_to_heading_min_angle: 0.5
       rotate_to_heading_angular_vel: 1.0 # 最大角速度 1.0 rad/s
       
@@ -74,17 +74,13 @@ local_costmap:
       update_frequency: 5.0
       publish_frequency: 2.0
       global_frame: odom
-      robot_base_frame: base_link
+      robot_base_frame: base_footprint
       use_sim_time: False
       rolling_window: true
       width: 3
       height: 3
       resolution: 0.05
-      
-      # ★ 核心修改：使用多边形 Footprint 替代 robot_radius
-      footprint: "[[-0.22, -0.22], [-0.22, 0.22], [0.22, 0.22], [0.22, -0.22]]"
-      action_type: "none"
-      
+      robot_radius: 0.25
       plugins: ["voxel_layer", "inflation_layer"]
       
       voxel_layer:
@@ -108,8 +104,8 @@ local_costmap:
           
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 2.0   # 官方衰减系数
-        inflation_radius: 0.05     # 安全膨胀半径
+        cost_scaling_factor: 3.0   # 官方衰减系数
+        inflation_radius: 0.25     # 安全膨胀半径
 
 global_costmap:
   global_costmap:
@@ -117,12 +113,9 @@ global_costmap:
       update_frequency: 1.0
       publish_frequency: 1.0
       global_frame: map
-      robot_base_frame: base_link
+      robot_base_frame: base_footprint
       use_sim_time: False
-      
-      # ★ 核心修改：全局地图也使用多边形 Footprint
-      footprint: "[[-0.22, -0.22], [-0.22, 0.22], [0.22, 0.22], [0.22, -0.22]]"
-      
+      robot_radius: 0.25
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       
       static_layer:
@@ -144,14 +137,14 @@ global_costmap:
           
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 2.0
-        inflation_radius: 0.05
+        cost_scaling_factor: 3.0
+        inflation_radius: 0.25
 
 # ================= AEB 碰撞监视器 =================
 collision_monitor:
   ros__parameters:
     use_sim_time: False
-    base_frame_id: "base_link"
+    base_frame_id: "base_footprint"
     odom_frame_id: "odom"
     cmd_vel_in_topic: "cmd_vel_smoothed"
     cmd_vel_out_topic: "cmd_vel"
@@ -166,7 +159,7 @@ collision_monitor:
     stop_box:
       type: "polygon"
       # AEB 保护框需比物理车身 (0.22) 大一圈，前后左右各留 8cm 刹车缓冲
-      points: "[[-0.30, -0.30], [-0.30, 0.30], [0.30, 0.30], [0.30, -0.30]]"
+      points: "[[-0.25, -0.25], [-0.25, 0.25], [0.25, 0.25], [0.25, -0.25]]"
       action_type: "stop"
       visualize: True
       polygon_pub_topic: "polygon_stop"
@@ -234,7 +227,7 @@ docking_server:
     undock_linear_tolerance: 0.05
     undock_angular_tolerance: 0.1
     max_retries: 3
-    base_frame: "base_link"
+    base_frame: "base_footprint"
     odom_frame: "odom"
     dock_plugins: ["simple_dock"]
     simple_dock:
