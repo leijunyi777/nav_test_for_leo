@@ -73,10 +73,10 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         arguments = [
-            '--x', '0.035', 
+            '--x', '0.06813', 
             '--y', '0.0', 
-            '--z', '-0.137', 
-            '--yaw', '0.0', 
+            '--z', '-0.138', 
+            '--yaw', '3.14159', 
             '--pitch', '0.0', 
             '--roll', '0.0', 
             '--frame-id', 'base_link', 
@@ -118,7 +118,7 @@ def generate_launch_description():
         tf_base_to_laser,
         slam_launch,
         nav2_bringup_node,
-        joy_node,
-        teleop_twist_joy,
+        #joy_node,
+        #teleop_twist_joy,
         rviz_node
     ])

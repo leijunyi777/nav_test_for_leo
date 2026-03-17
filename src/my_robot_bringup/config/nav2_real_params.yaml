@@ -42,7 +42,7 @@ controller_server:
       transform_tolerance: 0.5
       
       # 核心：允许原地转弯对准
-      use_rotate_to_heading: false
+      use_rotate_to_heading: true
       rotate_to_heading_min_angle: 0.5
       rotate_to_heading_angular_vel: 1.0 # 最大角速度 1.0 rad/s
       
@@ -52,7 +52,7 @@ controller_server:
       
       # 官方推荐的加速度极限
       max_linear_accel: 1.0              # 线加速度 1.0 m/s^2
-      max_angular_accel: 1.5             # 角加速度给大点 (1.5)，以克服四轮原地静摩擦力
+      max_angular_accel: 3.0             # 角加速度给大点 (1.5)，以克服四轮原地静摩擦力
       
       max_robot_pose_search_dist: 10.0
       use_interpolation: true
@@ -97,7 +97,7 @@ local_costmap:
         scan:
           topic: /scan
           max_obstacle_height: 2.0
-          min_obstacle_height: 0.15
+          min_obstacle_height: 0.0
           clearing: True
           marking: True
           data_type: "LaserScan"
@@ -159,7 +159,7 @@ collision_monitor:
     stop_box:
       type: "polygon"
       # AEB 保护框需比物理车身 (0.22) 大一圈，前后左右各留 8cm 刹车缓冲
-      points: "[[-0.25, -0.25], [-0.25, 0.25], [0.25, 0.25], [0.25, -0.25]]"
+      points: "[[-0.16, -0.25], [-0.25, 0.25], [0.25, 0.25], [0.25, -0.16]]"
       action_type: "stop"
       visualize: True
       polygon_pub_topic: "polygon_stop"
