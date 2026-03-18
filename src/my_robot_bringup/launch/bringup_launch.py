@@ -73,7 +73,7 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         arguments = [
-            '--x', '0.06813', 
+            '--x', '0.02313', 
             '--y', '0.0', 
             '--z', '-0.138', 
             '--yaw', '3.14159', 
@@ -111,14 +111,35 @@ def generate_launch_description():
         arguments=['-d', rviz_config_file],
         output='screen'
     )
+    # 8. 启动四轮过滤器
+    four_wheel_filter_node = Node(
+        package='my_robot_bringup',
+        executable='four_wheel_filter',
+        name='four_wheel_filter',
+        output='screen',
+        launch_arguments={
+            'use_sim_time': 'false',  # <== 真实硬件必须为 false
+        }.items()
+    )
 
+    # =========================================================
+    # 9. 启动里程计重置触发节点 (只执行一次)
+    # =========================================================
+    reset_odom_trigger_node = Node(
+        package='my_robot_bringup',
+        executable='reset_odometry',  # 对应 setup.py 里的注册名
+        name='reset_odometry_trigger',
+        output='screen'
+    )
 
     return LaunchDescription([
+        reset_odom_trigger_node,
         rplidar_launch,
         tf_base_to_laser,
         slam_launch,
         nav2_bringup_node,
         #joy_node,
         #teleop_twist_joy,
-        rviz_node
+        rviz_node,
+        four_wheel_filter_node,
     ])
