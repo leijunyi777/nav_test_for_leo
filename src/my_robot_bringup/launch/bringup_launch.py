@@ -117,9 +117,9 @@ def generate_launch_description():
         executable='four_wheel_filter',
         name='four_wheel_filter',
         output='screen',
-        launch_arguments={
-            'use_sim_time': 'false',  # <== 真实硬件必须为 false
-        }.items()
+        parameters=[{
+        'use_sim_time': False, # 注意：在 Python 字典里可以直接用布尔值 False
+        }]
     )
 
     # =========================================================
@@ -133,7 +133,7 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        reset_odom_trigger_node,
+        #reset_odom_trigger_node,
         rplidar_launch,
         tf_base_to_laser,
         slam_launch,

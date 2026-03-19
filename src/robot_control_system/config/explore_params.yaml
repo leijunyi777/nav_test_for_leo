@@ -4,7 +4,7 @@
 
 /**:
   ros__parameters:
-    use_sim_time: True
+    use_sim_time: false
     # 与 nav2 / slam_toolbox 一致
     robot_base_frame: base_footprint
     # 探索结束后回到起点，然后不再发目标，由 RViz/Nav2 接收外部目标
