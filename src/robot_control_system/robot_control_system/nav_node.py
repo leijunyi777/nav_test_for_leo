@@ -131,7 +131,7 @@ class NavControllerNode(Node):
                 self._random_after_complete_timer = None
                 if self.nav_mode == "EXPLORE":
                     self.dispatch_random_goal()
-            self._random_after_complete_timer = self.create_timer(3.0, _start_random_after_complete)
+            self._random_after_complete_timer = self.create_timer(5.0, _start_random_after_complete)
         else:
             self.explore_lite_active = True
 

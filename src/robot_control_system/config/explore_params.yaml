@@ -8,7 +8,7 @@
     # 与 nav2 / slam_toolbox 一致
     robot_base_frame: base_footprint
     # 探索结束后回到起点，然后不再发目标，由 RViz/Nav2 接收外部目标
-    return_to_init: true
+    return_to_init: false
     # 使用 SLAM 发布的 /map（与 Nav2 global costmap 一致）
     costmap_topic: map
     costmap_updates_topic: map_updates
