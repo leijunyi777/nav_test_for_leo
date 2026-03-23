@@ -1,4 +1,4 @@
-，# Robot Control System
+# Robot Control System
 
 This project implements an end-to-end ROS 2 solution for autonomous **search–pick–place** with decoupled microservices. The **Main Controller** governs a strict finite‑state machine (FSM), while **Vision**, **Navigation**, and **Manipulator** act as focused actuators. Semantic memory is maintained per color, enabling the robot to pair objects with their matching boxes and complete **3 full cycles** before automatic shutdown.
 
