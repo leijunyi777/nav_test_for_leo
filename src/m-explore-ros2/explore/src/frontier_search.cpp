@@ -66,9 +66,10 @@ FrontierSearch::searchFrom(geometry_msgs::msg::Point position)
 
     // iterate over 4-connected neighbourhood
     for (unsigned nbr : nhood4(idx, *costmap_)) {
-      // add to queue all free, unvisited cells, use descending search in case
-      // initialized on non-free cell
-      if (map_[nbr] <= map_[idx] && !visited_flag[nbr]) {
+      // 允许搜索穿过膨胀层，只要不是致命障碍物(253+)或未知区域(255)
+      if (map_[nbr] < nav2_costmap_2d::INSCRIBED_INFLATED_OBSTACLE && 
+        map_[nbr] != nav2_costmap_2d::NO_INFORMATION && 
+        !visited_flag[nbr]) {
         visited_flag[nbr] = true;
         bfs.push(nbr);
         // check if cell is new frontier cell (unvisited, NO_INFORMATION, free
@@ -178,10 +179,10 @@ bool FrontierSearch::isNewFrontierCell(unsigned int idx,
     return false;
   }
 
-  // frontier cells should have at least one cell in 4-connected neighbourhood
-  // that is free
+  // 边界细胞旁边只要有任何可通过的区域（包括膨胀区）就可以算作合法边界
   for (unsigned int nbr : nhood4(idx, *costmap_)) {
-    if (map_[nbr] == FREE_SPACE) {
+    if (map_[nbr] < nav2_costmap_2d::INSCRIBED_INFLATED_OBSTACLE && 
+        map_[nbr] != nav2_costmap_2d::NO_INFORMATION) {
       return true;
     }
   }
