@@ -14,7 +14,7 @@ def generate_launch_description():
     slam_params_file = os.path.join(pkg_share, 'config', 'mapper_params_online_async.yaml')
     rviz_config_file = os.path.join(pkg_share, 'rviz', 'default.rviz')
     nav2_real_params_file = os.path.join(pkg_share, 'config', 'nav2_real_params.yaml')
-
+    custom_bt_path = os.path.join(pkg_share, 'config', 'navigate_to_pose_w_replanning_and_recovery.xml')
     #rplidar_launch_path = '/home/student40/Robotic_systems_design/nav2/src/rplidar_ros/launch/rplidar_a2m12_launch.py'
     rplidar_dir = get_package_share_directory('rplidar_ros')
     rplidar_launch_path = os.path.join(rplidar_dir, 'launch', 'rplidar_a2m12_launch.py')
@@ -92,6 +92,19 @@ def generate_launch_description():
         launch_arguments={'slam_params_file': slam_params_file, 'use_sim_time': 'false'}.items()
     )
 
+    # === 核心魔法：定义要篡改的参数字典 ===
+    param_substitutions = {
+        'default_nav_to_pose_bt_xml': custom_bt_path
+    }
+
+    # === 生成动态 YAML 文件对象 ===
+    configured_params = RewrittenYaml(
+        source_file=nav2_real_params_file,
+        root_key='', # 如果你的小车没有设置 namespace，这里留空即可
+        param_rewrites=param_substitutions,
+        convert_types=True
+    )
+
     # ================= 启动 Nav2 (纯导航模式) =================
     nav2_bringup_node = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -99,7 +112,7 @@ def generate_launch_description():
         ),
         launch_arguments={
             'use_sim_time': 'false',  # <== 真实硬件必须为 false
-            'params_file': nav2_real_params_file
+            'params_file': configured_params
         }.items()
     )
 
