@@ -1,0 +1,486 @@
+[0.059s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.059s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x70b4ec379eb0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x70b4ecfc0440>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x70b4ecfc0440>>, mixin_verb=('build',))
+[0.083s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.083s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.084s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.084s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.084s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.084s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.084s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/student13/debuging/lei_github/nav_test_for_leo'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.099s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'ignore'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'ignore_ament_install'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['colcon_pkg']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'colcon_pkg'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['colcon_meta']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'colcon_meta'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['ros']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'ros'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['cmake', 'python']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'cmake'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'python'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['python_setup_py']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'python_setup_py'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extensions ['ignore', 'ignore_ament_install']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'ignore'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'ignore_ament_install'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extensions ['colcon_pkg']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'colcon_pkg'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extensions ['colcon_meta']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'colcon_meta'
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extensions ['ros']
+[0.100s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'ros'
+[0.102s] DEBUG:colcon.colcon_core.package_identification:Package 'src/m-explore-ros2/explore' with type 'ros.ament_cmake' and name 'explore_lite'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'ignore'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'ignore_ament_install'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extensions ['colcon_pkg']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'colcon_pkg'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extensions ['colcon_meta']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'colcon_meta'
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extensions ['ros']
+[0.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'ros'
+[0.103s] DEBUG:colcon.colcon_core.package_identification:Package 'src/m-explore-ros2/explore_lite_msgs' with type 'ros.ament_cmake' and name 'explore_lite_msgs'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extensions ['ignore', 'ignore_ament_install']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'ignore'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'ignore_ament_install'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extensions ['colcon_pkg']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'colcon_pkg'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extensions ['colcon_meta']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'colcon_meta'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extensions ['ros']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'ros'
+[0.103s] DEBUG:colcon.colcon_core.package_identification:Package 'src/m-explore-ros2/map_merge' with type 'ros.ament_cmake' and name 'multirobot_map_merge'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'ignore'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'ignore_ament_install'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['colcon_pkg']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'colcon_pkg'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['colcon_meta']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'colcon_meta'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['ros']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'ros'
+[0.104s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_robot_bringup' with type 'ros.ament_python' and name 'my_robot_bringup'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_interfaces) by extension 'ignore'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_interfaces) by extension 'ignore_ament_install'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_interfaces) by extensions ['colcon_pkg']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_interfaces) by extension 'colcon_pkg'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_interfaces) by extensions ['colcon_meta']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_interfaces) by extension 'colcon_meta'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_interfaces) by extensions ['ros']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_interfaces) by extension 'ros'
+[0.104s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_robot_interfaces' with type 'ros.ament_cmake' and name 'my_robot_interfaces'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_system) by extensions ['ignore', 'ignore_ament_install']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_system) by extension 'ignore'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_system) by extension 'ignore_ament_install'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_system) by extensions ['colcon_pkg']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_system) by extension 'colcon_pkg'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_system) by extensions ['colcon_meta']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_system) by extension 'colcon_meta'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_system) by extensions ['ros']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_system) by extension 'ros'
+[0.105s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_control_system' with type 'ros.ament_python' and name 'robot_control_system'
+[0.105s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.105s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.105s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.105s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.105s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.117s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 395 installed packages in /opt/ros/jazzy
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_args' from command line to 'None'
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_target' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.144s] DEBUG:colcon.colcon_core.verb:Building package 'explore_lite_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs', 'merge_install': False, 'path': '/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore_lite_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_target' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_clean_first' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_force_configure' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'ament_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.144s] DEBUG:colcon.colcon_core.verb:Building package 'multirobot_map_merge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge', 'merge_install': False, 'path': '/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/map_merge', 'symlink_install': False, 'test_result_base': None}
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_target' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.144s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup', 'merge_install': False, 'path': '/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'my_robot_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.144s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces', 'merge_install': False, 'path': '/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_target' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_clean_cache' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_clean_first' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_force_configure' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'ament_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'catkin_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.144s] DEBUG:colcon.colcon_core.verb:Building package 'explore_lite' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite', 'merge_install': False, 'path': '/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore', 'symlink_install': False, 'test_result_base': None}
+[0.145s] Level 5:colcon.colcon_core.verb:set package 'robot_control_system' build argument 'cmake_args' from command line to 'None'
+[0.145s] Level 5:colcon.colcon_core.verb:set package 'robot_control_system' build argument 'cmake_target' from command line to 'None'
+[0.145s] Level 5:colcon.colcon_core.verb:set package 'robot_control_system' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.145s] Level 5:colcon.colcon_core.verb:set package 'robot_control_system' build argument 'cmake_clean_cache' from command line to 'False'
+[0.145s] Level 5:colcon.colcon_core.verb:set package 'robot_control_system' build argument 'cmake_clean_first' from command line to 'False'
+[0.145s] Level 5:colcon.colcon_core.verb:set package 'robot_control_system' build argument 'cmake_force_configure' from command line to 'False'
+[0.145s] Level 5:colcon.colcon_core.verb:set package 'robot_control_system' build argument 'ament_cmake_args' from command line to 'None'
+[0.145s] Level 5:colcon.colcon_core.verb:set package 'robot_control_system' build argument 'catkin_cmake_args' from command line to 'None'
+[0.145s] Level 5:colcon.colcon_core.verb:set package 'robot_control_system' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.145s] DEBUG:colcon.colcon_core.verb:Building package 'robot_control_system' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/student13/debuging/lei_github/nav_test_for_leo/build/robot_control_system', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system', 'merge_install': False, 'path': '/home/student13/debuging/lei_github/nav_test_for_leo/src/robot_control_system', 'symlink_install': False, 'test_result_base': None}
+[0.145s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.146s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.146s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore_lite_msgs' with build type 'ament_cmake'
+[0.146s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore_lite_msgs'
+[0.147s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.147s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.147s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.152s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_interfaces' with build type 'ament_cmake'
+[0.153s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_interfaces'
+[0.153s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.153s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.157s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/map_merge' with build type 'ament_cmake'
+[0.157s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/map_merge'
+[0.158s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.158s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.163s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_bringup' with build type 'ament_python'
+[0.163s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_bringup', 'ament_prefix_path')
+[0.164s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/hook/ament_prefix_path.ps1'
+[0.166s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/hook/ament_prefix_path.dsv'
+[0.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/hook/ament_prefix_path.sh'
+[0.167s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.168s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.175s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore_lite_msgs -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs
+[0.178s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces
+[0.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/map_merge -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge
+[0.527s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_bringup'
+[0.527s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.527s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.345s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_bringup': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_bringup build --build-base /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_bringup/build install --record /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_bringup/install.log --single-version-externally-managed install_data
+[2.108s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_bringup' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_bringup build --build-base /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_bringup/build install --record /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_bringup/install.log --single-version-externally-managed install_data
+[2.111s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup' for CMake module files
+[2.112s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup' for CMake config files
+[2.113s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/lib'
+[2.113s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/bin'
+[2.113s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/lib/pkgconfig/my_robot_bringup.pc'
+[2.114s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/lib/python3.12/site-packages'
+[2.114s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_bringup', 'pythonpath')
+[2.114s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/hook/pythonpath.ps1'
+[2.115s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/hook/pythonpath.dsv'
+[2.115s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/hook/pythonpath.sh'
+[2.116s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/bin'
+[2.116s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_bringup)
+[2.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/package.ps1'
+[2.117s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/package.dsv'
+[2.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/package.sh'
+[2.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/package.bash'
+[2.120s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/my_robot_bringup/package.zsh'
+[2.120s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_bringup/share/colcon-core/packages/my_robot_bringup)
+[3.482s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces
+[3.486s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces -- -j12 -l12
+[3.512s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore_lite_msgs -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs
+[3.513s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs -- -j12 -l12
+[7.357s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs -- -j12 -l12
+[7.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs
+[7.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces -- -j12 -l12
+[7.404s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces
+[7.440s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(explore_lite_msgs)
+[7.441s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs
+[7.441s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs' for CMake module files
+[7.442s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs' for CMake config files
+[7.443s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'cmake_prefix_path')
+[7.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.ps1'
+[7.443s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.dsv'
+[7.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.sh'
+[7.445s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib'
+[7.445s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'ld_library_path_lib')
+[7.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.ps1'
+[7.445s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.dsv'
+[7.446s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.sh'
+[7.446s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/bin'
+[7.446s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/pkgconfig/explore_lite_msgs.pc'
+[7.447s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages'
+[7.447s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'pythonpath')
+[7.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.ps1'
+[7.447s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.dsv'
+[7.448s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.sh'
+[7.449s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/bin'
+[7.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.ps1'
+[7.450s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.dsv'
+[7.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.sh'
+[7.451s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.bash'
+[7.451s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.zsh'
+[7.452s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/colcon-core/packages/explore_lite_msgs)
+[7.452s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(explore_lite_msgs)
+[7.452s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs' for CMake module files
+[7.453s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs' for CMake config files
+[7.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'cmake_prefix_path')
+[7.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.ps1'
+[7.455s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.dsv'
+[7.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.sh'
+[7.456s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib'
+[7.456s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'ld_library_path_lib')
+[7.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.ps1'
+[7.457s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.dsv'
+[7.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.sh'
+[7.458s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/bin'
+[7.458s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/pkgconfig/explore_lite_msgs.pc'
+[7.458s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages'
+[7.458s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'pythonpath')
+[7.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.ps1'
+[7.459s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.dsv'
+[7.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.sh'
+[7.460s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/bin'
+[7.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.ps1'
+[7.461s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.dsv'
+[7.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.sh'
+[7.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.bash'
+[7.464s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/package.zsh'
+[7.465s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/colcon-core/packages/explore_lite_msgs)
+[7.465s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore' with build type 'ament_cmake'
+[7.465s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore'
+[7.465s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.466s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.496s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite
+[7.497s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_interfaces)
+[7.497s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces' for CMake module files
+[7.498s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces
+[7.498s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces' for CMake config files
+[7.498s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_interfaces', 'cmake_prefix_path')
+[7.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/cmake_prefix_path.ps1'
+[7.499s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/cmake_prefix_path.dsv'
+[7.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/cmake_prefix_path.sh'
+[7.500s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib'
+[7.500s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_interfaces', 'ld_library_path_lib')
+[7.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/ld_library_path_lib.ps1'
+[7.500s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/ld_library_path_lib.dsv'
+[7.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/ld_library_path_lib.sh'
+[7.500s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/bin'
+[7.501s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/pkgconfig/my_robot_interfaces.pc'
+[7.501s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages'
+[7.501s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_interfaces', 'pythonpath')
+[7.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/pythonpath.ps1'
+[7.501s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/pythonpath.dsv'
+[7.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/pythonpath.sh'
+[7.502s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/bin'
+[7.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.ps1'
+[7.502s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.dsv'
+[7.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.sh'
+[7.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.bash'
+[7.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.zsh'
+[7.503s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/colcon-core/packages/my_robot_interfaces)
+[7.504s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_interfaces)
+[7.505s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces' for CMake module files
+[7.505s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces' for CMake config files
+[7.506s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_interfaces', 'cmake_prefix_path')
+[7.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/cmake_prefix_path.ps1'
+[7.506s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/cmake_prefix_path.dsv'
+[7.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/cmake_prefix_path.sh'
+[7.507s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib'
+[7.507s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_interfaces', 'ld_library_path_lib')
+[7.507s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/ld_library_path_lib.ps1'
+[7.507s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/ld_library_path_lib.dsv'
+[7.507s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/ld_library_path_lib.sh'
+[7.507s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/bin'
+[7.507s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/pkgconfig/my_robot_interfaces.pc'
+[7.508s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages'
+[7.508s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_interfaces', 'pythonpath')
+[7.508s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/pythonpath.ps1'
+[7.508s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/pythonpath.dsv'
+[7.508s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/hook/pythonpath.sh'
+[7.510s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/bin'
+[7.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.ps1'
+[7.511s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.dsv'
+[7.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.sh'
+[7.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.bash'
+[7.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.zsh'
+[7.513s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/colcon-core/packages/my_robot_interfaces)
+[7.514s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/robot_control_system' with build type 'ament_python'
+[7.514s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_control_system', 'ament_prefix_path')
+[7.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/hook/ament_prefix_path.ps1'
+[7.515s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/hook/ament_prefix_path.dsv'
+[7.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/hook/ament_prefix_path.sh'
+[7.516s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.516s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.749s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/student13/debuging/lei_github/nav_test_for_leo/src/robot_control_system'
+[7.750s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.750s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.754s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/map_merge -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge
+[7.755s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge -- -j12 -l12
+[8.955s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/src/robot_control_system': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces:/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces:/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib:/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/build/robot_control_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/lib/python3.12/site-packages:/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages:/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_control_system build --build-base /home/student13/debuging/lei_github/nav_test_for_leo/build/robot_control_system/build install --record /home/student13/debuging/lei_github/nav_test_for_leo/build/robot_control_system/install.log --single-version-externally-managed install_data
+[9.565s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system' for CMake module files
+[9.566s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/src/robot_control_system' returned '0': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces:/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces:/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib:/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/build/robot_control_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/lib/python3.12/site-packages:/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages:/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_control_system build --build-base /home/student13/debuging/lei_github/nav_test_for_leo/build/robot_control_system/build install --record /home/student13/debuging/lei_github/nav_test_for_leo/build/robot_control_system/install.log --single-version-externally-managed install_data
+[9.566s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system' for CMake config files
+[9.567s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/lib'
+[9.568s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/bin'
+[9.568s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/lib/pkgconfig/robot_control_system.pc'
+[9.568s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/lib/python3.12/site-packages'
+[9.568s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_control_system', 'pythonpath')
+[9.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/hook/pythonpath.ps1'
+[9.569s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/hook/pythonpath.dsv'
+[9.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/hook/pythonpath.sh'
+[9.572s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/bin'
+[9.572s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_control_system)
+[9.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/package.ps1'
+[9.576s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/package.dsv'
+[9.578s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/package.sh'
+[9.579s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/package.bash'
+[9.580s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/robot_control_system/package.zsh'
+[9.583s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/robot_control_system/share/colcon-core/packages/robot_control_system)
+[10.902s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite' returned '0': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite
+[10.904s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite -- -j12 -l12
+[27.376s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge -- -j12 -l12
+[27.378s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge
+[27.416s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(multirobot_map_merge)
+[27.416s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge' for CMake module files
+[27.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/multirobot_map_merge
+[27.417s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge' for CMake config files
+[27.418s] Level 1:colcon.colcon_core.shell:create_environment_hook('multirobot_map_merge', 'cmake_prefix_path')
+[27.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.ps1'
+[27.419s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.dsv'
+[27.419s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.sh'
+[27.420s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/lib'
+[27.420s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/bin'
+[27.420s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/lib/pkgconfig/multirobot_map_merge.pc'
+[27.421s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/lib/python3.12/site-packages'
+[27.421s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/bin'
+[27.422s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.ps1'
+[27.422s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.dsv'
+[27.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.sh'
+[27.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.bash'
+[27.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.zsh'
+[27.424s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/colcon-core/packages/multirobot_map_merge)
+[27.425s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(multirobot_map_merge)
+[27.425s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge' for CMake module files
+[27.426s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge' for CMake config files
+[27.426s] Level 1:colcon.colcon_core.shell:create_environment_hook('multirobot_map_merge', 'cmake_prefix_path')
+[27.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.ps1'
+[27.427s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.dsv'
+[27.428s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.sh'
+[27.428s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/lib'
+[27.428s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/bin'
+[27.429s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/lib/pkgconfig/multirobot_map_merge.pc'
+[27.429s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/lib/python3.12/site-packages'
+[27.429s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/bin'
+[27.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.ps1'
+[27.430s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.dsv'
+[27.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.sh'
+[27.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.bash'
+[27.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/multirobot_map_merge/package.zsh'
+[27.433s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/multirobot_map_merge/share/colcon-core/packages/multirobot_map_merge)
+[29.097s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite' returned '0': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite -- -j12 -l12
+[29.098s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite
+[29.116s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(explore_lite)
+[29.116s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite' for CMake module files
+[29.117s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite' returned '0': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite
+[29.117s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite' for CMake config files
+[29.117s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite', 'cmake_prefix_path')
+[29.118s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.ps1'
+[29.118s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.dsv'
+[29.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.sh'
+[29.119s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/lib'
+[29.119s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/bin'
+[29.119s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/lib/pkgconfig/explore_lite.pc'
+[29.120s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/lib/python3.12/site-packages'
+[29.120s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/bin'
+[29.120s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.ps1'
+[29.121s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.dsv'
+[29.121s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.sh'
+[29.122s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.bash'
+[29.122s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.zsh'
+[29.122s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/colcon-core/packages/explore_lite)
+[29.123s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(explore_lite)
+[29.123s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite' for CMake module files
+[29.123s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite' for CMake config files
+[29.124s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite', 'cmake_prefix_path')
+[29.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.ps1'
+[29.124s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.dsv'
+[29.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.sh'
+[29.125s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/lib'
+[29.125s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/bin'
+[29.125s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/lib/pkgconfig/explore_lite.pc'
+[29.125s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/lib/python3.12/site-packages'
+[29.125s] Level 1:colcon.colcon_core.environment:checking '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/bin'
+[29.125s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.ps1'
+[29.125s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.dsv'
+[29.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.sh'
+[29.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.bash'
+[29.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.zsh'
+[29.127s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/colcon-core/packages/explore_lite)
+[29.127s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[29.127s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[29.127s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[29.127s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[29.134s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[29.134s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[29.134s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[29.149s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[29.150s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student13/debuging/lei_github/nav_test_for_leo/install/local_setup.ps1'
+[29.150s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/student13/debuging/lei_github/nav_test_for_leo/install/_local_setup_util_ps1.py'
+[29.151s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student13/debuging/lei_github/nav_test_for_leo/install/setup.ps1'
+[29.151s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student13/debuging/lei_github/nav_test_for_leo/install/local_setup.sh'
+[29.152s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/student13/debuging/lei_github/nav_test_for_leo/install/_local_setup_util_sh.py'
+[29.152s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student13/debuging/lei_github/nav_test_for_leo/install/setup.sh'
+[29.152s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student13/debuging/lei_github/nav_test_for_leo/install/local_setup.bash'
+[29.153s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student13/debuging/lei_github/nav_test_for_leo/install/setup.bash'
+[29.153s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/student13/debuging/lei_github/nav_test_for_leo/install/local_setup.zsh'
+[29.153s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/student13/debuging/lei_github/nav_test_for_leo/install/setup.zsh'

@@ -1,0 +1,260 @@
+[0.024s] Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces
+[0.103s] -- The C compiler identification is GNU 13.3.0
+[0.182s] -- The CXX compiler identification is GNU 13.3.0
+[0.199s] -- Detecting C compiler ABI info
+[0.301s] -- Detecting C compiler ABI info - done
+[0.311s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.311s] -- Detecting C compile features
+[0.312s] -- Detecting C compile features - done
+[0.327s] -- Detecting CXX compiler ABI info
+[0.473s] -- Detecting CXX compiler ABI info - done
+[0.485s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.485s] -- Detecting CXX compile features
+[0.485s] -- Detecting CXX compile features - done
+[0.488s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.679s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.802s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.812s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.913s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.997s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.712s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[2.203s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.743s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.746s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.858s] -- Found PythonExtra: /usr/bin/python3  
+[3.237s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[3.269s] -- Configuring done (3.2s)
+[3.309s] -- Generating done (0.0s)
+[3.317s] -- Build files have been written to: /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces
+[3.329s] Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_interfaces -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces
+[3.333s] Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces -- -j12 -l12
+[3.389s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[3.401s] [  2%] Built target ament_cmake_python_copy_my_robot_interfaces
+[3.659s] [  2%] Built target my_robot_interfaces__rosidl_generator_type_description
+[3.670s] [  4%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.686s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.772s] running egg_info
+[3.773s] creating my_robot_interfaces.egg-info
+[3.809s] writing my_robot_interfaces.egg-info/PKG-INFO
+[3.809s] writing dependency_links to my_robot_interfaces.egg-info/dependency_links.txt
+[3.809s] writing top-level names to my_robot_interfaces.egg-info/top_level.txt
+[3.810s] writing manifest file 'my_robot_interfaces.egg-info/SOURCES.txt'
+[3.924s] reading manifest file 'my_robot_interfaces.egg-info/SOURCES.txt'
+[3.925s] writing manifest file 'my_robot_interfaces.egg-info/SOURCES.txt'
+[3.988s] [  6%] Built target ament_cmake_python_build_my_robot_interfaces_egg
+[4.061s] [  6%] Built target my_robot_interfaces__cpp
+[4.165s] [  9%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_robot_interfaces/msg/detail/error_status__description.c.o[0m
+[4.165s] [ 11%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_robot_interfaces/msg/detail/error_status__functions.c.o[0m
+[4.169s] [ 13%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_robot_interfaces/msg/detail/object_target__functions.c.o[0m
+[4.171s] [ 18%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_robot_interfaces/msg/detail/error_status__type_support.c.o[0m
+[4.171s] [ 18%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_robot_interfaces/msg/detail/object_target__description.c.o[0m
+[4.171s] [ 20%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_robot_interfaces/msg/detail/object_target__type_support.c.o[0m
+[4.249s] [ 22%] [32m[1mLinking C shared library libmy_robot_interfaces__rosidl_generator_c.so[0m
+[4.296s] [ 22%] Built target my_robot_interfaces__rosidl_generator_c
+[4.309s] [ 27%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.310s] [ 27%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[4.313s] [ 29%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.313s] [ 31%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.316s] [ 34%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[4.317s] [ 36%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[4.882s] [ 40%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_robot_interfaces/msg/detail/object_target__type_support.cpp.o[0m
+[4.884s] [ 40%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_robot_interfaces/msg/detail/error_status__type_support.cpp.o[0m
+[5.037s] [ 43%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_robot_interfaces/msg/object_target__type_support.cpp.o[0m
+[5.037s] [ 45%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_robot_interfaces/msg/error_status__type_support.cpp.o[0m
+[5.089s] [ 47%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_interfaces/msg/error_status__type_support.cpp.o[0m
+[5.096s] [ 50%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_robot_interfaces/msg/object_target__type_support.cpp.o[0m
+[5.111s] [ 52%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_interfaces/msg/detail/object_target__type_support.c.o[0m
+[5.115s] [ 54%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_robot_interfaces/msg/detail/error_status__type_support.c.o[0m
+[5.159s] [ 56%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_robot_interfaces/msg/detail/object_target__type_support_c.cpp.o[0m
+[5.163s] [ 59%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_robot_interfaces/msg/detail/error_status__type_support_c.cpp.o[0m
+[5.171s] [ 61%] [32m[1mLinking CXX shared library libmy_robot_interfaces__rosidl_typesupport_c.so[0m
+[5.177s] [ 63%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_robot_interfaces/msg/detail/dds_fastrtps/object_target__type_support.cpp.o[0m
+[5.178s] [ 65%] [32mBuilding CXX object CMakeFiles/my_robot_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_robot_interfaces/msg/detail/dds_fastrtps/error_status__type_support.cpp.o[0m
+[5.293s] [ 68%] [32m[1mLinking C shared library libmy_robot_interfaces__rosidl_typesupport_introspection_c.so[0m
+[5.451s] [ 68%] Built target my_robot_interfaces__rosidl_typesupport_c
+[5.464s] [ 68%] Built target my_robot_interfaces__rosidl_typesupport_introspection_c
+[5.706s] [ 70%] [32m[1mLinking CXX shared library libmy_robot_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[5.876s] [ 70%] Built target my_robot_interfaces__rosidl_typesupport_introspection_cpp
+[6.017s] [ 72%] [32m[1mLinking CXX shared library libmy_robot_interfaces__rosidl_typesupport_cpp.so[0m
+[6.092s] [ 72%] Built target my_robot_interfaces__rosidl_typesupport_cpp
+[6.249s] [ 75%] [32m[1mLinking CXX shared library libmy_robot_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[6.291s] [ 77%] [32m[1mLinking CXX shared library libmy_robot_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[6.403s] [ 77%] Built target my_robot_interfaces__rosidl_typesupport_fastrtps_cpp
+[6.403s] [ 77%] Built target my_robot_interfaces__rosidl_typesupport_fastrtps_c
+[6.433s] [ 77%] Built target my_robot_interfaces
+[6.458s] [ 79%] [34m[1mGenerating Python code for ROS interfaces[0m
+[6.749s] [ 79%] Built target my_robot_interfaces__py
+[6.775s] [ 81%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_robot_interfaces/msg/_object_target_s.c.o[0m
+[6.779s] [ 84%] [32mBuilding C object CMakeFiles/my_robot_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_robot_interfaces/msg/_error_status_s.c.o[0m
+[6.945s] [ 86%] [32m[1mLinking C shared library libmy_robot_interfaces__rosidl_generator_py.so[0m
+[6.990s] [ 86%] Built target my_robot_interfaces__rosidl_generator_py
+[7.009s] [ 88%] [32mBuilding C object CMakeFiles/my_robot_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/my_robot_interfaces/_my_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[7.013s] [ 90%] [32mBuilding C object CMakeFiles/my_robot_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/my_robot_interfaces/_my_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[7.015s] [ 93%] [32mBuilding C object CMakeFiles/my_robot_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/my_robot_interfaces/_my_robot_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[7.135s] [ 95%] [32m[1mLinking C shared module rosidl_generator_py/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_c.so[0m
+[7.161s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[7.186s] [ 97%] Built target my_robot_interfaces_s__rosidl_typesupport_c
+[7.192s] [100%] [32m[1mLinking C shared module rosidl_generator_py/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[7.195s] [100%] Built target my_robot_interfaces_s__rosidl_typesupport_introspection_c
+[7.232s] [100%] Built target my_robot_interfaces_s__rosidl_typesupport_fastrtps_c
+[7.250s] Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces -- -j12 -l12
+[7.251s] Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces
+[7.259s] -- Install configuration: ""
+[7.259s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/ament_index/resource_index/rosidl_interfaces/my_robot_interfaces
+[7.259s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/msg/ErrorStatus.json
+[7.259s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/msg/ObjectTarget.json
+[7.259s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces
+[7.259s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg
+[7.260s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/error_status.h
+[7.260s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail
+[7.260s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__type_support.c
+[7.260s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__struct.h
+[7.260s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__functions.h
+[7.260s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__functions.h
+[7.260s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__description.c
+[7.261s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__functions.c
+[7.261s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__struct.h
+[7.261s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__type_support.h
+[7.261s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__type_support.h
+[7.261s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__functions.c
+[7.261s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__type_support.c
+[7.261s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__description.c
+[7.262s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/rosidl_generator_c__visibility_control.h
+[7.262s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/object_target.h
+[7.262s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/environment/library_path.sh
+[7.262s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/environment/library_path.dsv
+[7.262s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_generator_c.so
+[7.262s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_generator_c.so" to ""
+[7.262s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces
+[7.263s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg
+[7.263s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail
+[7.263s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__rosidl_typesupport_fastrtps_c.h
+[7.263s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__rosidl_typesupport_fastrtps_c.h
+[7.263s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.263s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_fastrtps_c.so
+[7.263s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[7.264s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces
+[7.264s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg
+[7.264s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail
+[7.264s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__type_support.c
+[7.264s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__rosidl_typesupport_introspection_c.h
+[7.264s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__type_support.c
+[7.265s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__rosidl_typesupport_introspection_c.h
+[7.265s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.265s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_introspection_c.so
+[7.265s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[7.265s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_c.so
+[7.265s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_c.so" to ""
+[7.265s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces
+[7.265s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg
+[7.265s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/object_target.hpp
+[7.266s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail
+[7.266s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__builder.hpp
+[7.266s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__builder.hpp
+[7.266s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__struct.hpp
+[7.266s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__traits.hpp
+[7.266s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__struct.hpp
+[7.266s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__type_support.hpp
+[7.266s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__type_support.hpp
+[7.266s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__traits.hpp
+[7.267s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/error_status.hpp
+[7.267s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[7.267s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces
+[7.267s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg
+[7.267s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.267s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail
+[7.267s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/dds_fastrtps
+[7.267s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__rosidl_typesupport_fastrtps_cpp.hpp
+[7.267s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__rosidl_typesupport_fastrtps_cpp.hpp
+[7.268s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[7.268s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[7.268s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces
+[7.268s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg
+[7.268s] -- Up-to-date: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail
+[7.268s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__type_support.cpp
+[7.268s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__rosidl_typesupport_introspection_cpp.hpp
+[7.268s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/error_status__type_support.cpp
+[7.268s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/include/my_robot_interfaces/my_robot_interfaces/msg/detail/object_target__rosidl_typesupport_introspection_cpp.hpp
+[7.268s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_introspection_cpp.so
+[7.269s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[7.269s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_cpp.so
+[7.269s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_typesupport_cpp.so" to ""
+[7.269s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/environment/pythonpath.sh
+[7.269s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/environment/pythonpath.dsv
+[7.269s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces-0.0.1-py3.12.egg-info
+[7.269s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces-0.0.1-py3.12.egg-info/SOURCES.txt
+[7.269s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces-0.0.1-py3.12.egg-info/PKG-INFO
+[7.269s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces-0.0.1-py3.12.egg-info/dependency_links.txt
+[7.269s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces-0.0.1-py3.12.egg-info/top_level.txt
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/_my_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/_my_robot_interfaces_s.ep.rosidl_typesupport_c.c
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg/_error_status_s.c
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg/_error_status.py
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg/_object_target_s.c
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg/_object_target.py
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg/__init__.py
+[7.270s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[7.271s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_c.so
+[7.271s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/_my_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[7.271s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/__init__.py
+[7.271s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_introspection_c.so
+[7.308s] Listing '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces'...
+[7.308s] Compiling '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/__init__.py'...
+[7.309s] Listing '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg'...
+[7.309s] Compiling '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg/__init__.py'...
+[7.309s] Compiling '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg/_error_status.py'...
+[7.309s] Compiling '/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/msg/_object_target.py'...
+[7.319s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[7.320s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[7.320s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_introspection_c.so
+[7.320s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[7.320s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_c.so
+[7.324s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/python3.12/site-packages/my_robot_interfaces/my_robot_interfaces_s__rosidl_typesupport_c.so" to ""
+[7.324s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_generator_py.so
+[7.324s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/lib/libmy_robot_interfaces__rosidl_generator_py.so" to ""
+[7.328s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/msg/ErrorStatus.idl
+[7.328s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/msg/ObjectTarget.idl
+[7.329s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/msg/ErrorStatus.msg
+[7.329s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/msg/ObjectTarget.msg
+[7.334s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/ament_index/resource_index/package_run_dependencies/my_robot_interfaces
+[7.335s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/ament_index/resource_index/parent_prefix_path/my_robot_interfaces
+[7.335s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/environment/ament_prefix_path.sh
+[7.335s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/environment/ament_prefix_path.dsv
+[7.335s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/environment/path.sh
+[7.335s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/environment/path.dsv
+[7.335s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/local_setup.bash
+[7.335s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/local_setup.sh
+[7.335s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/local_setup.zsh
+[7.336s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/local_setup.dsv
+[7.338s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.dsv
+[7.338s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/ament_index/resource_index/packages/my_robot_interfaces
+[7.339s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/export_my_robot_interfaces__rosidl_generator_cExport.cmake
+[7.339s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/export_my_robot_interfaces__rosidl_generator_cExport-noconfig.cmake
+[7.339s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/export_my_robot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[7.340s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/export_my_robot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.340s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[7.340s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.340s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfaces__rosidl_typesupport_cExport.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/export_my_robot_interfaces__rosidl_generator_cppExport.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/export_my_robot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/export_my_robot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfaces__rosidl_typesupport_cppExport.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/export_my_robot_interfaces__rosidl_generator_pyExport.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/export_my_robot_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/rosidl_cmake-extras.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.341s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfacesConfig.cmake
+[7.342s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/cmake/my_robot_interfacesConfig-version.cmake
+[7.342s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/my_robot_interfaces/share/my_robot_interfaces/package.xml
+[7.345s] Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces

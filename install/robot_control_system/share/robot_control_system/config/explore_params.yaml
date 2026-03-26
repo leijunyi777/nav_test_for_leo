@@ -1,0 +1,26 @@
+# =========================================================================
+# explore_lite 参数 (与 leo_sim_nav 的 SLAM + Nav2 配合，探索完成后回起点并等待目标)
+# =========================================================================
+
+/**:
+  ros__parameters:
+    use_sim_time: True
+    # 与 nav2 / slam_toolbox 一致
+    robot_base_frame: base_footprint
+    # 探索结束后回到起点，然后不再发目标，由 RViz/Nav2 接收外部目标
+    return_to_init: false
+    # 使用 SLAM 发布的 /map（与 Nav2 global costmap 一致）
+    costmap_topic: map
+    costmap_updates_topic: map_updates
+    visualize: true
+    planner_frequency: 0.5  # 2 Hz
+    # 探索“尽量完整”的关键：给同一前沿更长的等待时间，避免过早黑名单/停止
+    progress_timeout: 50.0
+    # 降低距离惩罚，让前沿选择不过度偏向“离得最近但贡献不大的前沿”
+    potential_scale: 0.003
+    orientation_scale: 0.0
+    # 提高前沿规模的奖励，让算法更倾向于覆盖更大未知边界的前沿
+    gain_scale: 2.0
+    transform_tolerance: 0.5
+    # 减小最小前沿尺寸阈值，减少狭窄通道/小开口导致的“前沿被过滤”
+    min_frontier_size: 0.3

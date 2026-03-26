@@ -1,0 +1,106 @@
+[0.029s] Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite
+[0.096s] -- The C compiler identification is GNU 13.3.0
+[0.176s] -- The CXX compiler identification is GNU 13.3.0
+[0.197s] -- Detecting C compiler ABI info
+[0.292s] -- Detecting C compiler ABI info - done
+[0.300s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.300s] -- Detecting C compile features
+[0.300s] -- Detecting C compile features - done
+[0.322s] -- Detecting CXX compiler ABI info
+[0.474s] -- Detecting CXX compiler ABI info - done
+[0.493s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.493s] -- Detecting CXX compile features
+[0.494s] -- Detecting CXX compile features - done
+[0.495s] -- BuilD for ROS2: jazzy
+[0.502s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.853s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.130s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.247s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.269s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.287s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.313s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.471s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.475s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.649s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.693s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.747s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.937s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.971s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[2.077s] -- Found tf2_ros: 0.36.19 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[2.351s] -- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[2.386s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[2.388s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.388s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.400s] -- Found nav2_msgs: 1.3.10 (/opt/ros/jazzy/share/nav2_msgs/cmake)
+[2.597s] -- Found map_msgs: 2.4.1 (/opt/ros/jazzy/share/map_msgs/cmake)
+[2.632s] -- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[2.667s] -- Found nav2_costmap_2d: 1.3.10 (/opt/ros/jazzy/share/nav2_costmap_2d/cmake)
+[2.971s] -- Found explore_lite_msgs: 1.0.0 (/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/share/explore_lite_msgs/cmake)
+[2.989s] -- Found ament_lint_auto: 0.17.4 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.178s] -- Found ament_cmake_gtest: 2.5.5 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[3.183s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.189s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.329s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.331s] -- Found Threads: TRUE  
+[3.342s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.342s] -- Configured cppcheck include dirs: /home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore/include;$<BUILD_INTERFACE:/home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore/include>
+[3.342s] -- Configured cppcheck exclude dirs and/or files: 
+[3.343s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.344s] -- Configured 'flake8' exclude dirs and/or files: 
+[3.345s] -- Added test 'lint_cmake' to check CMake code style
+[3.346s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.348s] -- Added test 'uncrustify' to check C / C++ code style
+[3.348s] -- Configured uncrustify additional arguments: 
+[3.349s] -- Added test 'xmllint' to check XML markup files
+[3.353s] -- Configuring done (3.3s)
+[3.391s] -- Generating done (0.0s)
+[3.401s] -- Build files have been written to: /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite
+[3.435s] Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite' returned '0': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/student13/debuging/lei_github/nav_test_for_leo/src/m-explore-ros2/explore -DCMAKE_INSTALL_PREFIX=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite
+[3.437s] Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite -- -j12 -l12
+[3.521s] [ 10%] [32mBuilding CXX object CMakeFiles/explore.dir/src/explore.cpp.o[0m
+[3.528s] [ 20%] [32mBuilding CXX object CMakeFiles/explore.dir/src/frontier_search.cpp.o[0m
+[3.531s] [ 30%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[3.535s] [ 40%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[3.538s] [ 50%] [32mBuilding CXX object CMakeFiles/explore.dir/src/costmap_client.cpp.o[0m
+[4.823s] [ 60%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[4.886s] [ 60%] Built target gtest_main
+[8.117s] [ 70%] [32m[1mLinking CXX static library libgtest.a[0m
+[8.223s] [ 70%] Built target gtest
+[8.264s] [ 80%] [32mBuilding CXX object CMakeFiles/test_explore.dir/test/test_explore.cpp.o[0m
+[9.913s] [ 90%] [32m[1mLinking CXX executable test_explore[0m
+[10.115s] [ 90%] Built target test_explore
+[20.869s] [100%] [32m[1mLinking CXX executable explore[0m
+[21.618s] [100%] Built target explore
+[21.630s] Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite' returned '0': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite -- -j12 -l12
+[21.632s] Invoking command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite
+[21.638s] -- Install configuration: ""
+[21.638s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/include/explore/
+[21.638s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/include/explore//costmap_tools.h
+[21.638s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/include/explore//costmap_client.h
+[21.638s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/include/explore//frontier_search.h
+[21.638s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/include/explore//explore.h
+[21.638s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/config
+[21.639s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/config/params.yaml
+[21.639s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/config/params_costmap.yaml
+[21.639s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/launch
+[21.639s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/launch/explore.launch.py
+[21.639s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/lib/explore_lite/explore
+[21.645s] -- Set non-toolchain portion of runtime path of "/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/lib/explore_lite/explore" to ""
+[21.646s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/ament_index/resource_index/package_run_dependencies/explore_lite
+[21.646s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/ament_index/resource_index/parent_prefix_path/explore_lite
+[21.646s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/environment/ament_prefix_path.sh
+[21.646s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/environment/ament_prefix_path.dsv
+[21.647s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/environment/path.sh
+[21.647s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/environment/path.dsv
+[21.647s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/local_setup.bash
+[21.647s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/local_setup.sh
+[21.647s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/local_setup.zsh
+[21.647s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/local_setup.dsv
+[21.647s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.dsv
+[21.648s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/ament_index/resource_index/packages/explore_lite
+[21.648s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/cmake/ament_cmake_export_dependencies-extras.cmake
+[21.648s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/cmake/ament_cmake_export_include_directories-extras.cmake
+[21.648s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/cmake/explore_liteConfig.cmake
+[21.648s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/cmake/explore_liteConfig-version.cmake
+[21.648s] -- Installing: /home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite/share/explore_lite/package.xml
+[21.650s] Invoked command in '/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite' returned '0': AMENT_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/student13/debuging/lei_github/nav_test_for_leo/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite

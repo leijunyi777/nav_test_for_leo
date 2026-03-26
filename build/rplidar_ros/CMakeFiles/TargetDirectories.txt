@@ -1,0 +1,12 @@
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/uninstall.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/rplidar_ros_uninstall.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/rplidar_node.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/rplidar_composition.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/rplidar_client.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/test.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/edit_cache.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/rebuild_cache.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/list_install_components.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/install.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/install/local.dir
+/home/student13/debuging/lei_github/nav_test_for_leo/build/rplidar_ros/CMakeFiles/install/strip.dir
