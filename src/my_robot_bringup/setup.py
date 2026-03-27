@@ -32,6 +32,7 @@ setup(
         'console_scripts': [
             'four_wheel_filter = my_robot_bringup.four_wheel_filter_node:main',
             'reset_odometry = my_robot_bringup.reset_odometry:main',
+            'move_forward = my_robot_bringup.move_forward:main',
         ],
     },
 )
