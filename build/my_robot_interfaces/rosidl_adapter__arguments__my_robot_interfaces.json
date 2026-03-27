@@ -1,7 +1,0 @@
-{
-  "package_name": "my_robot_interfaces",
-  "non_idl_tuples": [
-    "/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_interfaces:msg/ErrorStatus.msg",
-    "/home/student13/debuging/lei_github/nav_test_for_leo/src/my_robot_interfaces:msg/ObjectTarget.msg"
-  ]
-}

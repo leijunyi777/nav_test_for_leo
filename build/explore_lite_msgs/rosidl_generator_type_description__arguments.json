@@ -1,7 +1,0 @@
-{
-  "package_name": "explore_lite_msgs",
-  "output_dir": "/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs/rosidl_generator_type_description/explore_lite_msgs",
-  "idl_tuples": [
-    "/home/student13/debuging/lei_github/nav_test_for_leo/build/explore_lite_msgs/rosidl_adapter/explore_lite_msgs:msg/ExploreStatus.idl"
-  ]
-}

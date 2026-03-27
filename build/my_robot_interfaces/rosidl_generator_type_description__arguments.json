@@ -1,8 +1,0 @@
-{
-  "package_name": "my_robot_interfaces",
-  "output_dir": "/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces/rosidl_generator_type_description/my_robot_interfaces",
-  "idl_tuples": [
-    "/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:msg/ErrorStatus.idl",
-    "/home/student13/debuging/lei_github/nav_test_for_leo/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:msg/ObjectTarget.idl"
-  ]
-}
