@@ -55,7 +55,7 @@ class TargetFollowerNode(Node):
         # 2. 判断停止条件 (位置误差 < 0.01m)
         distance_error = math.hypot(error_x, error_z)
         if distance_error < 0.01:
-            self.get_logger().info('位置误差小于 0.01m，到达目标，停止运动。', throttle_duration_sec=1.0)
+            self.get_logger().info('The positional error is less than 0.01m. Reach the target and stop the movement.', throttle_duration_sec=1.0)
             self.prev_time = current_time
             return cmd  # 返回全 0 指令
 
@@ -105,7 +105,7 @@ class TargetFollowerNode(Node):
             self.pub_cmd.publish(stop_cmd)
             
             # 使用 throttle 避免日志刷屏，每秒最多打印一次
-            self.get_logger().warn('超过 0.5s 未收到目标更新，发送 0 速度急停！', throttle_duration_sec=1.0)
+            self.get_logger().warn('If no target update is received within 0.5 seconds, send a 0-speed emergency stop!', throttle_duration_sec=1.0)
             
             # 【关键】重置 PD 状态和时间
             # 防止目标重新出现时，dt 过大或误差跳变导致微分项 (D) 出现极端的输出脉冲
