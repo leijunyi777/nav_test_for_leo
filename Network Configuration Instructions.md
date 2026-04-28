@@ -1,15 +1,32 @@
 # 🤖 ROS 2 分布式集群网络与远程运维手册
 
 ### 🚀 方案简析
-本方案的核心逻辑是让 **NUC 充当整个机器人系统的软路由与通信中枢**。
-整体部署分为以下四个核心模块：
-1.  **NUC (核心路由中枢) 配置：** 负责绑定静态 IP、开启双网卡 NAT 转发、建立 Tailscale 异地组网入口、部署 NoMachine 图形服务端，并启动 ROS 2 通信的 Discovery Server。
-2.  **Arm Pi (机械臂) 配置：** 物理接入 NUC 有线网口，强制其网关指向 NUC，并配置单播环境变量。
-3.  **Leo Rover (底盘) 配置：** 物理接入 NUC 有线网口，强制其网关指向 NUC，并配置单播环境变量。
-4.  **控制端 PC (远程监控) 配置：** 接入 Tailscale 网络，配置智能自适应环境切换脚本，并验证全链路通信与远程桌面。
+
+本方案的核心逻辑是让 **NUC 充当整个机器人系统的软路由与通信中枢**。整体部署分为以下四个核心模块：
+
+* **NUC (核心路由中枢) 配置**
+    * **网络基础**：负责绑定静态 IP、开启双网卡 NAT 转发。
+    * **远程运维**：建立 Tailscale 异地组网入口、部署 NoMachine 图形服务端。
+    * **通信核心**：启动 ROS 2 通信的 Discovery Server。
+
+* **Arm Pi (机械臂) 配置**
+    * **物理链路**：物理接入 NUC 有线网口。
+    * **路由规则**：强制其网关指向 NUC。
+    * **环境部署**：配置单播环境变量。
+
+* **Leo Rover (底盘) 配置**
+    * **物理链路**：物理接入 NUC 有线网口。
+    * **路由规则**：强制其网关指向 NUC。
+    * **环境部署**：配置单播环境变量。
+
+* **控制端 PC (远程监控) 配置**
+    * **组网接入**：接入 Tailscale 异地网络。
+    * **环境优化**：配置智能自适应环境切换脚本。
+    * **全链路验证**：验证 ROS 2 通信稳定性与远程桌面流畅度。
+
 ```bash
 # ==============================================================================
-#                      ROS 2 分布式集群网络拓扑架构图 (Jazzy)
+#                 ROS 2 分布式集群网络拓扑架构图 (Jazzy)
 # ==============================================================================
 #
 #                            [ 互联网 / 异地环境 ]
@@ -29,7 +46,7 @@
 #  | ----------------------- |                 |     IP: 10.42.0.1 (纯局域网)  |
 #  | 接口: 实验室WiFi/热点   |                 |                               |
 #  | IP: DHCP 或 10.42.0.x   |                 |  [本地硬件直连总线]           |
-#  | ROS_DS: 自动切换        |                 |  USB-A 3.0: 激光雷达 (LiDAR)  |
+#  | ROS_DS: 自动切换         |                 |  USB-A 3.0: 激光雷达 (LiDAR)  |
 #  +-------------------------+                 |  Type-C:    视觉相机          |
 #                                              |                               |
 #                                              |  [物理有线 enp114s0]          |
@@ -40,7 +57,7 @@
 #            | (10.0.0.x 纯控制局域网，保障极低延迟)                       |
 #            v                                                             v
 #  +---------------------------------+                 +---------------------------------+
-#  |       Arm Pi (机械臂控制板)     |                 |       Leo Rover (底盘树莓派)    |
+#  |        Arm Pi (机械臂控制板)     |                 |        Leo Rover (底盘树莓派)    |
 #  | ------------------------------- |                 | ------------------------------- |
 #  | 接口: 有线以太网                |                 | 接口: 有线以太网                |
 #  | IP: 10.0.0.59                   |                 | IP: 10.0.0.1                    |
@@ -152,7 +169,7 @@ fastdds discovery --server-id 0 --ip-address 0.0.0.0 --port 11811
 ```bash
 export ROS_DOMAIN_ID=5
 # NUC 自身填 127.0.0.1
-export ROS_DISCOVERY_SERVER="127.0.0.1:11811" 
+export ROS_DISCOVERY_SERVER="127.0.0.1:11811" 
 ```
 
 ---
@@ -172,11 +189,11 @@ export ROS_DOMAIN_ID=5
 
 # 自动检测网络环境分配 Discovery Server IP
 if ping -c 1 -W 1 10.42.0.1 > /dev/null 2>&1; then
-    # 本地环境：能 ping 通无线物理网关
-    export ROS_DISCOVERY_SERVER="10.42.0.1:11811"
+    # 本地环境：能 ping 通无线物理网关
+    export ROS_DISCOVERY_SERVER="10.42.0.1:11811"
 else
-    # 异地环境：走 Tailscale 虚拟 IP (请替换为 NUC 真实的 Tailscale IP)
-    export ROS_DISCOVERY_SERVER="100.xx.yy.zz:11811" 
+    # 异地环境：走 Tailscale 虚拟 IP (请替换为 NUC 真实的 Tailscale IP)
+    export ROS_DISCOVERY_SERVER="100.xx.yy.zz:11811" 
 fi
 ```
 
@@ -184,26 +201,26 @@ fi
 在 PC 上按顺序执行，快速定位网络及通信瓶颈：
 
 * **网络穿透与路由测试：**
-    * `ping 10.42.0.1` (验证 PC -> NUC 物理无线或 Tailscale 畅通)
-    * `ping 10.0.0.59` (验证 PC -> NUC NAT 转发 -> 机械臂畅通)
-    * `ping 10.0.0.1` (验证 PC -> NUC NAT 转发 -> 小车畅通)
-    * *排障提示：若不通，重点排查 NUC 的 iptables 规则是否开机生效，或下位机网关是否指向 10.0.0.100。*
+    * `ping 10.42.0.1` (验证 PC -> NUC 物理无线或 Tailscale 畅通)
+    * `ping 10.0.0.59` (验证 PC -> NUC NAT 转发 -> 机械臂畅通)
+    * `ping 10.0.0.1` (验证 PC -> NUC NAT 转发 -> 小车畅通)
+    * *排障提示：若不通，重点排查 NUC 的 iptables 规则是否开机生效，或下位机网关是否指向 10.0.0.100。*
 * **链路质量测试：**
-    * 执行 `ping 10.0.0.59 -i 0.2`
-    * *预期指标：本地延迟稳定在 5ms 左右；异地根据网络情况波动，但不应有高频丢包。*
+    * 执行 `ping 10.0.0.59 -i 0.2`
+    * *预期指标：本地延迟稳定在 5ms 左右；异地根据网络情况波动，但不应有高频丢包。*
 * **跨网段与异地 ROS 2 通信测试：**
-    * 在 Arm Pi 上运行：`ros2 run demo_nodes_cpp talker`
-    * 在 PC 上运行：`ros2 node list` (应能看到 `/talker`)
-    * 在 PC 上接收：`ros2 topic echo /chatter`
+    * 在 Arm Pi 上运行：`ros2 run demo_nodes_cpp talker`
+    * 在 PC 上运行：`ros2 node list` (应能看到 `/talker`)
+    * 在 PC 上接收：`ros2 topic echo /chatter`
 
 ### 4. 远程桌面 (NoMachine) 使用指南
-1.  **连接目标：** 打开 PC 端 NoMachine 客户端，在地址栏输入 NUC 的 Tailscale 虚拟 IP (`100.x.y.z`) 或本地无线 IP (`10.42.0.1`)。
-2.  **账号登录：** 输入 NUC 的系统用户名和密码。
-3.  **画面调优：** 进入桌面后，点击右上角翻页图标 (或按 `Ctrl+Alt+0`)：
-    * 进入 **Display** 选项，勾选 `Match the client window size` (自适应分辨率)。
-    * 若网络存在波动导致卡顿，建议勾选 `Disable network adaptive quality` 强制稳定画质。
-    * 进入 **Audio** 选项，勾选 `Mute audio on server` 节省音频传输带宽。
-4.  **最终验证：** 在桌面上打开终端，输入 `rviz2`，验证是否能流畅打开可视化界面并正常显示传感器点云/图像。
+1.  **连接目标：** 打开 PC 端 NoMachine 客户端，在地址栏输入 NUC 的 Tailscale 虚拟 IP (`100.x.y.z`) 或本地无线 IP (`10.42.0.1`)。
+2.  **账号登录：** 输入 NUC 的 system 用户名和密码。
+3.  **画面调优：** 进入桌面后，点击右上角翻页图标 (或按 `Ctrl+Alt+0`)：
+    * 进入 **Display** 选项，勾选 `Match the client window size` (自适应分辨率)。
+    * 若网络存在波动导致卡顿，建议勾选 `Disable network adaptive quality` 强制稳定画质。
+    * 进入 **Audio** 选项，勾选 `Mute audio on server` 节省音频传输带宽。
+4.  **最终验证：** 在桌面上打开终端，输入 `rviz2`，验证是否能流畅打开可视化界面并正常显示传感器点云/图像。
 
 ---
 
@@ -221,7 +238,7 @@ sudo nmcli con up "Wired connection 1"
 在机械臂的 `~/.bashrc` 末尾添加配置，并 `source ~/.bashrc`：
 ```bash
 export ROS_DOMAIN_ID=5
-export ROS_DISCOVERY_SERVER="10.0.0.100:11811" 
+export ROS_DISCOVERY_SERVER="10.0.0.100:11811" 
 ```
 
 ---
@@ -235,5 +252,5 @@ SSH 登录底盘树莓派 (IP: `10.0.0.1`)。同理，确保其网络配置文�
 在小车的 `~/.bashrc` 末尾添加配置，并 `source ~/.bashrc`：
 ```bash
 export ROS_DOMAIN_ID=5
-export ROS_DISCOVERY_SERVER="10.0.0.100:11811" 
+export ROS_DISCOVERY_SERVER="10.0.0.100:11811" 
 ```
