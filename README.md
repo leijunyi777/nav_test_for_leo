@@ -37,15 +37,11 @@ source install/setup.bash
 ros2 launch my_robot_sim leo_sim_nav.launch.py
 
 ```
+```bash
+ros2 action send_goal /navigate_to_pose nav2_msgs/action/NavigateToPose "{pose: {header: {frame_id: 'map'}, pose: {position: {x: 1.0, y: 0.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}}}"
 
-## 🌟 核心特性与优化总结
+```
 
-本项目针对四轮滑移转向（Skid-Steering）机器人和 Gazebo 仿真环境进行了深度排雷与定制优化：
-
-1. **彻底解决地图漂移与重影**：通过在 URDF 中增大底盘等效轮距、提升雷达扫描频率（20Hz / 720 samples），并压榨 SLAM Toolbox 的最小更新阈值（`0.05 rad`），消除了原地打转带来的累计误差。
-2. **RPP 规划器“丝滑过弯”**：关闭了 Nav2 RPP 局部规划器的 `use_rotate_to_heading`，强迫小车采用平滑弧线过弯，避免了原地搓地导致的 TF 树震荡。
-3. **消除雷达贴墙盲区**：将 GPU Lidar 的 `min_range` 从默认的 0.35m 下调至 0.10m，防止近距离贴墙时代价地图被意外擦除导致的车体撞击。
-4. **统一 Base Frame 高度**：强制将 SLAM 与 Nav2 的参考坐标系设为 `base_footprint` (Z=0)，并设定生成高度为 `Z=0.02`，完美解决 RViz 中地图生成在车顶的“高空抛物”问题。
 
 ## 调试前提准备
 
