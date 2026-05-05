@@ -159,7 +159,13 @@ class VisionNode(Node):
             if depth <= 0.0:
                 continue
 
+            if depth > 0.8:
+                continue
+
             X, Y, Z = self.pixel_to_3d(u, v, depth)
+
+            if name == "box":
+                Z -= 0.13  # 13 cm = 0.13 meters
 
             msg = ObjectTarget()
             msg.name = name
