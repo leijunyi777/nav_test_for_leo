@@ -113,7 +113,8 @@ class RobotControlNode(Node):
         self.arm_action_done = False    
         self.check_start_tick = 0       
         self.arm_timer = None
-        self.search_start_time = None           
+        self.search_start_time = None
+        self.state_entry_time = None           
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
@@ -219,6 +220,7 @@ class RobotControlNode(Node):
         and resets tracking variables for the new state.
         """
         self.current_state = new_state
+        self.state_entry_time = self.get_clock().now()
         if log_msg:
             self.get_logger().info(f"--- STATE: {new_state} | {log_msg} ---")
         matrix = self.control_matrix[self.current_state]
@@ -381,6 +383,11 @@ class RobotControlNode(Node):
         """
         # FIXED: Prevent infinite deadlock if navigation fails
         if not msg.data:
+            if self.state_entry_time is not None:
+                elapsed = (self.get_clock().now() - self.state_entry_time).nanoseconds / 1e9
+                if elapsed < 2:
+                    self.get_logger().warn(f"Ignoring stale Nav failure signal during state transition (Elapsed: {elapsed:.2f}s)")
+                    return
             self.get_logger().warn("Navigation failed (msg.data is False)! Marking target as deferred.")
             if self.active_target_color in self.map_hash:
                 self.map_hash[self.active_target_color]['status'] = 'deferred'
