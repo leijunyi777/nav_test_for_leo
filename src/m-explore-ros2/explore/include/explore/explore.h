@@ -35,140 +35,148 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *
  *********************************************************************/
-#ifndef NAV_EXPLORE_H_
-#define NAV_EXPLORE_H_
-
-#include <explore/costmap_client.h>
-#include <explore/frontier_search.h>
-#include <geometry_msgs/msg/pose_stamped.hpp>
-#include <tf2_ros/transform_listener.hpp>
-
-#include <chrono>
-#include <cmath>
-#include <explore_lite_msgs/msg/explore_status.hpp>
-#include <geometry_msgs/msg/point.hpp>
-#include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/bool.hpp>
-#include <std_msgs/msg/color_rgba.hpp>
-#include <string>
-#include <visualization_msgs/msg/marker_array.hpp>
-
-#include "nav2_msgs/action/navigate_to_pose.hpp"
-#include "rclcpp_action/rclcpp_action.hpp"
-
-using namespace std::placeholders;
-#ifdef ELOQUENT
-#define ACTION_NAME "NavigateToPose"
-#elif DASHING
-#define ACTION_NAME "NavigateToPose"
-#else
-#define ACTION_NAME "navigate_to_pose"
-#endif
-namespace explore
-{
-/**
- * @class Explore
- * @brief A class adhering to the robot_actions::Action interface that moves the
- * robot base to explore its environment.
- */
-class Explore : public rclcpp::Node
-{
-public:
-  Explore();
-  ~Explore();
-
-  void start();
-  void stop(bool finished_exploring = false);
-  void resume();
-
-  using NavigationGoalHandle =
-      rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>;
-
-private:
-  /**
-   * @brief  Make a global plan
-   */
-  void makePlan();
-
-  // /**
-  //  * @brief  Publish a frontiers as markers
-  //  */
-  void visualizeFrontiers(
-      const std::vector<frontier_exploration::Frontier>& frontiers);
-
-  bool goalOnBlacklist(const geometry_msgs::msg::Point& goal);
-  // 统一封装探索目标发送：同一点可只改朝向（yaw）进行重试。
-  void sendExploreNavigateGoal(const geometry_msgs::msg::Point& position,
-    double yaw_rad);
-  // 清理 ABORT 朝向重试状态与定时器（在 stop/cancel/success 等路径复用）。
-  void resetAbortYawRetry();
-  // 触发下一次 ABORT 同点朝向重试定时器（1.5s）。
-  void scheduleAbortYawRetryTimer();
-
-  NavigationGoalHandle::SharedPtr navigation_goal_handle_;
-  // void
-  // goal_response_callback(std::shared_future<NavigationGoalHandle::SharedPtr>
-  // future);
-  void reachedGoal(const NavigationGoalHandle::WrappedResult& result,
-                   const geometry_msgs::msg::Point& frontier_goal);
-
-  rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr
-      marker_array_publisher_;
-
-  /**
-    * @brief Publisher for exploration status updates (see ExploreStatus.msg for status values)
+ #ifndef NAV_EXPLORE_H_
+ #define NAV_EXPLORE_H_
+ 
+ #include <explore/costmap_client.h>
+ #include <explore/frontier_search.h>
+ #include <geometry_msgs/msg/pose_stamped.hpp>
+ #include <tf2_ros/transform_listener.hpp>
+ 
+ #include <chrono>
+ #include <cmath>
+ #include <cstdint>
+ #include <explore_lite_msgs/msg/explore_status.hpp>
+ #include <geometry_msgs/msg/point.hpp>
+ #include <rclcpp/rclcpp.hpp>
+ #include <std_msgs/msg/bool.hpp>
+ #include <std_msgs/msg/color_rgba.hpp>
+ #include <string>
+ #include <visualization_msgs/msg/marker_array.hpp>
+ 
+ #include "nav2_msgs/action/navigate_to_pose.hpp"
+ #include "rclcpp_action/rclcpp_action.hpp"
+ 
+ using namespace std::placeholders;
+ #ifdef ELOQUENT
+ #define ACTION_NAME "NavigateToPose"
+ #elif DASHING
+ #define ACTION_NAME "NavigateToPose"
+ #else
+ #define ACTION_NAME "navigate_to_pose"
+ #endif
+ namespace explore
+ {
+ /**
+  * @class Explore
+  * @brief A class adhering to the robot_actions::Action interface that moves the
+  * robot base to explore its environment.
+  */
+ class Explore : public rclcpp::Node
+ {
+ public:
+   Explore();
+   ~Explore();
+ 
+   void start();
+   void stop(bool finished_exploring = false);
+   void resume();
+ 
+   using NavigationGoalHandle =
+       rclcpp_action::ClientGoalHandle<nav2_msgs::action::NavigateToPose>;
+ 
+ private:
+   /**
+    * @brief  Make a global plan
     */
-  rclcpp::Publisher<explore_lite_msgs::msg::ExploreStatus>::SharedPtr status_pub_;
-
-  rclcpp::Logger logger_;
-  tf2_ros::Buffer tf_buffer_;
-  tf2_ros::TransformListener tf_listener_;
-
-  Costmap2DClient costmap_client_;
-  rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SharedPtr
-      move_base_client_;
-  frontier_exploration::FrontierSearch search_;
-  rclcpp::TimerBase::SharedPtr exploring_timer_;
-  // rclcpp::TimerBase::SharedPtr oneshot_;
-
-  rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr resume_subscription_;
-  void resumeCallback(const std_msgs::msg::Bool::SharedPtr msg);
-
-  std::vector<geometry_msgs::msg::Point> frontier_blacklist_;
-  geometry_msgs::msg::Point prev_goal_;
-  double prev_goal_cost_;
-  double prev_distance_;
-  rclcpp::Time start_time_;
-  double last_progress_ratio_ = 0.0;
-  rclcpp::Time last_progress_change_time_;
-  rclcpp::Time last_progress_;
-  size_t last_markers_count_;
-
-  geometry_msgs::msg::Pose initial_pose_;
-  void returnToInitialPose(void);
-
-  // 用于位姿看门狗（防卡死）的变量
-  geometry_msgs::msg::Pose watchdog_last_pose_;
-  rclcpp::Time watchdog_last_time_;
-  bool watchdog_initialized_ = false;
-  // ABORT 同点朝向重试状态：true 表示正在同一目标点做 45° 旋转重试链。
-  bool abort_yaw_retry_active_ = false;
-  // 当前正在重试的“同一目标点”坐标。
-  geometry_msgs::msg::Point abort_yaw_retry_position_;
-  // 下一个待重试的朝向序号（1..7，对应 -45°..-315°）。
-  int abort_yaw_next_index_ = 1;
-  // 同点朝向重试的一次性定时器。
-  rclcpp::TimerBase::SharedPtr abort_yaw_retry_timer_;
-
-  // parameters
-  double planner_frequency_;
-  double potential_scale_, orientation_scale_, gain_scale_;
-  double progress_timeout_;
-  bool visualize_;
-  bool return_to_init_;
-  std::string robot_base_frame_;
-  bool resuming_ = false;
-};
-}  // namespace explore
-
-#endif
+   void makePlan();
+ 
+   // /**
+   //  * @brief  Publish a frontiers as markers
+   //  */
+   void visualizeFrontiers(
+       const std::vector<frontier_exploration::Frontier>& frontiers);
+ 
+   bool goalOnBlacklist(const geometry_msgs::msg::Point& goal);
+   // 统一封装探索目标发送：同一点可只改朝向（yaw）进行重试。
+   void sendExploreNavigateGoal(const geometry_msgs::msg::Point& position,
+                                double yaw_rad,
+                                uint64_t retry_session_id);
+   // 清理 ABORT 朝向重试状态与定时器（在 stop/cancel/success 等路径复用）。
+   void resetAbortYawRetry();
+   // 触发下一次 ABORT 同点朝向重试定时器（1.5s）。
+   void scheduleAbortYawRetryTimer();
+ 
+   NavigationGoalHandle::SharedPtr navigation_goal_handle_;
+   // void
+   // goal_response_callback(std::shared_future<NavigationGoalHandle::SharedPtr>
+   // future);
+   void reachedGoal(const NavigationGoalHandle::WrappedResult& result,
+                    const geometry_msgs::msg::Point& frontier_goal,
+                    uint64_t callback_retry_session_id);
+ 
+   rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr
+       marker_array_publisher_;
+ 
+   /**
+     * @brief Publisher for exploration status updates (see ExploreStatus.msg for status values)
+     */
+   rclcpp::Publisher<explore_lite_msgs::msg::ExploreStatus>::SharedPtr status_pub_;
+ 
+   rclcpp::Logger logger_;
+   tf2_ros::Buffer tf_buffer_;
+   tf2_ros::TransformListener tf_listener_;
+ 
+   Costmap2DClient costmap_client_;
+   rclcpp_action::Client<nav2_msgs::action::NavigateToPose>::SharedPtr
+       move_base_client_;
+   frontier_exploration::FrontierSearch search_;
+   rclcpp::TimerBase::SharedPtr exploring_timer_;
+   // rclcpp::TimerBase::SharedPtr oneshot_;
+ 
+   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr resume_subscription_;
+   void resumeCallback(const std_msgs::msg::Bool::SharedPtr msg);
+ 
+   std::vector<geometry_msgs::msg::Point> frontier_blacklist_;
+   geometry_msgs::msg::Point prev_goal_;
+   double prev_goal_cost_;
+   double prev_distance_;
+   rclcpp::Time start_time_;
+   double last_progress_ratio_ = 0.0;
+   rclcpp::Time last_progress_change_time_;
+   rclcpp::Time last_progress_;
+   size_t last_markers_count_;
+ 
+   geometry_msgs::msg::Pose initial_pose_;
+   void returnToInitialPose(void);
+ 
+   // 用于位姿看门狗（防卡死）的变量
+   geometry_msgs::msg::Pose watchdog_last_pose_;
+   rclcpp::Time watchdog_last_time_;
+   bool watchdog_initialized_ = false;
+   // ABORT 同点朝向重试状态：true 表示正在同一目标点做 45° 旋转重试链。
+   bool abort_yaw_retry_active_ = false;
+   // 当前正在重试的“同一目标点”坐标。
+   geometry_msgs::msg::Point abort_yaw_retry_position_;
+   // 下一个待重试的朝向序号（1..7，对应 -45°..-315°）。
+   int abort_yaw_next_index_ = 1;
+   // 同点朝向重试的一次性定时器。
+   rclcpp::TimerBase::SharedPtr abort_yaw_retry_timer_;
+   // ABORT 朝向重试链会话号：用于过滤过期回调，避免旧 goal 回调污染当前重试状态。
+   uint64_t abort_yaw_retry_session_id_ = 0;
+   // 标记当前是否处于外部 stop/shutdown 引发的取消流程。
+   bool nav_stop_in_progress_ = false;
+ 
+   // parameters
+   double planner_frequency_;
+   double potential_scale_, orientation_scale_, gain_scale_;
+   double progress_timeout_;
+   bool visualize_;
+   bool return_to_init_;
+   std::string robot_base_frame_;
+   bool resuming_ = false;
+ };
+ }  // namespace explore
+ 
+ #endif
+ 
