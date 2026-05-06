@@ -91,6 +91,16 @@ Add:
 # ROS2 network config
 export ROS_DOMAIN_ID=5
 export ROS_LOCALHOST_ONLY=0
+
+# Do not enable FastDDS XML by default.
+# Enable it only when using wired ROS2 multi-machine communication.
+# export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/fastdds.xml
+
+alias ros_local='unset FASTRTPS_DEFAULT_PROFILES_FILE; export ROS_DOMAIN_ID=5; export ROS_LOCALHOST_ONLY=0; echo "ROS2 local mode: FastDDS XML disabled"'
+
+alias ros_wired='export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/fastdds.xml; export ROS_DOMAIN_ID=5; export ROS_LOCALHOST_ONLY=0; echo "ROS2 wired mode: FastDDS XML enabled"'
+
+
 ```
 
 Apply:
