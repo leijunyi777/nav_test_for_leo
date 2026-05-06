@@ -85,6 +85,22 @@ def generate_launch_description():
         ]
     )
 
+    tf_base_to_camera = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments = [
+            '--x', '0.17375', 
+            '--y', '0.0', 
+            '--z', '0.09568', 
+            '--qx', '-0.57923', 
+            '--qy', '0.57923', 
+            '--qz', '-0.40558', 
+            '--qw', '0.40558', 
+            '--frame-id', 'base_link', 
+            '--child-frame-id', 'camera_link'
+        ]
+    )
+
     # 5. 启动 Slam Toolbox
     slam_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -150,6 +166,7 @@ def generate_launch_description():
         reset_odom_trigger_node,
         rplidar_launch,
         tf_base_to_laser,
+        tf_base_to_camera,
         slam_launch,
         nav2_bringup_node,
         joy_node,
