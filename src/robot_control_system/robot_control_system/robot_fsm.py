@@ -112,7 +112,8 @@ class RobotControlNode(Node):
         self.grasp_attempts = 0         
         self.arm_action_done = False    
         self.check_start_tick = 0       
-        self.arm_timer = None           
+        self.arm_timer = None
+        self.search_start_time = None           
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
@@ -169,8 +170,11 @@ class RobotControlNode(Node):
                 self.active_target_color = target_color
                 self.transition_to_state(STATE_MOVE_TO_OBJECT, f"Pair found: {target_color.upper()}")
             elif deferred_color and all_others_solved:
-                self.active_target_color = deferred_color
-                self.transition_to_state(STATE_MOVE_TO_OBJECT, f"Processing deferred: {deferred_color.upper()}")
+                if self.search_start_time is not None:
+                    elapsed_time = (self.get_clock().now() - self.search_start_time).nanoseconds / 1e9
+                    if elapsed_time > 10.0:
+                        self.active_target_color = deferred_color
+                        self.transition_to_state(STATE_MOVE_TO_OBJECT, f"Processing deferred: {deferred_color.upper()}")
 
         elif self.current_state == STATE_GRASP:
             if self.arm_action_done:
@@ -254,6 +258,8 @@ class RobotControlNode(Node):
 
         elif new_state in [STATE_MOVE_TO_OBJECT, STATE_MOVE_TO_BOX, STATE_SEARCH]:
             self.arm_action_done = False
+            if new_state == STATE_SEARCH:
+                self.search_start_time = self.get_clock().now()
 
     def vision_state_callback(self, msg: Bool):
         self.vision_msg_tick += 1
@@ -393,7 +399,7 @@ class RobotControlNode(Node):
         if self.current_state != STATE_INIT:
             self.init_timer.cancel()
             return
-        camera_ready = self.count_publishers('/detected_object') > 0 
+        camera_ready = self.count_publishers('/detection_state') > 0 
         nav_ready    = self.count_subscribers('/nav/goal_point') > 0
         arm_ready    = self.count_subscribers('/arm/grasp_pose') > 0
         if camera_ready and nav_ready and arm_ready:
