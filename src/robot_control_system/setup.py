@@ -12,7 +12,7 @@ setup(
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
         ("share/" + package_name, ["package.xml"]),
         (os.path.join("share", package_name, "launch"), glob("launch/*.launch.py")),
-        ("share/" + package_name, ["robot_control_system/best.pt"]),
+        ("share/" + package_name, ["robot_control_system/model3.pt"]),
         (os.path.join('share', package_name, 'config'), glob(os.path.join('config', '*.yaml'))),
     ],
     install_requires=["setuptools"],

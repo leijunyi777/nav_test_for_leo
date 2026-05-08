@@ -27,7 +27,7 @@ class VisionNode(Node):
         # Load YOLO model
         # ----------------------------
         pkg_path = get_package_share_directory('robot_control_system')
-        model_path = os.path.join(pkg_path, 'best.pt')
+        model_path = os.path.join(pkg_path, 'model3.pt')
 
         self.get_logger().info(f"Loading model from: {model_path}")
         self.model = YOLO(model_path)
